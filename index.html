@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيادة الدكتور كناز أبو زعل | رعاية طبية متخصصة في دمشق - المزة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        clinic: {
+                            dark: '#063729',     /* أخضر زمردي عميق للثقة */
+                            primary: '#059669',  /* أخضر طبي أساسي */
+                            accent: '#10b981',   /* أخضر حيوي للأزرار */
+                            light: '#ecfdf5',    /* أخضر فاتح جداً للخلفيات */
+                            surface: '#f8fafc',  /* أبيض مائل للرمادي الهادئ */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+
+    <!-- Header & Pill Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-clinic-primary text-white flex items-center justify-center text-lg shadow-sm">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg text-clinic-dark block leading-none">عيادة د. كناز أبو زعل</span>
+                    <span class="text-xs text-slate-500 font-medium">دمشق – المزة</span>
+                </div>
+            </a>
+
+            <!-- Center Pill Menu (Desktop) -->
+            <nav class="hidden md:flex items-center bg-clinic-dark text-white px-6 py-2.5 rounded-full gap-7 text-sm font-medium shadow-sm">
+                <a href="#home" class="text-emerald-300 font-semibold">الرئيسية</a>
+                <a href="#services" class="hover:text-emerald-300 transition">الخدمات والرعاية</a>
+                <a href="#doctor" class="hover:text-emerald-300 transition">عن الطبيب</a>
+                <a href="#faq" class="hover:text-emerald-300 transition">الأسئلة الشائعة</a>
+                <a href="#location" class="hover:text-emerald-300 transition">الموقع والدوام</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#booking" class="bg-clinic-accent hover:bg-clinic-primary text-white px-5 py-2.5 rounded-full text-sm font-bold transition shadow-sm flex items-center gap-2">
+                <span>حجز موعد</span>
+                <i class="fa-solid fa-arrow-left text-xs"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-12 pb-16 lg:pt-20 lg:pb-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <!-- Right Column: Editorial Copy -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-clinic-light text-clinic-primary text-xs font-bold border border-emerald-200">
+                    <span class="w-2 h-2 rounded-full bg-clinic-primary"></span>
+                    <span>دمشق – المزة | عيادة الدكتور كناز أبو زعل</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold text-slate-900 leading-[1.2]">
+                    رعاية طبية موثوقة <br class="hidden sm:block">
+                    <span class="text-clinic-primary">وتشخيص دقيق لصحتك.</span>
+                </h1>
+
+                <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+                    في عيادة الدكتور كناز أبو زعل بالمزة، نضع صحة المريض وراحته في مقدمة أولوياتنا من خلال الفحص السريري الدقيق، المتابعة المستمرة، وتقديم الاستشارات الطبية الواضحة.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#booking" class="bg-clinic-accent hover:bg-clinic-primary text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base transition shadow-md shadow-emerald-600/15 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>احجز موعدك عبر واتساب</span>
+                    </a>
+                    <a href="#services" class="px-7 py-3.5 rounded-full font-bold text-sm sm:text-base text-slate-700 border border-slate-200 hover:border-clinic-primary hover:text-clinic-primary transition">
+                        استعراض الخدمات
+                    </a>
+                </div>
+
+                <!-- Trust Badge Row -->
+                <div class="pt-4 flex items-center gap-6 text-sm text-slate-600 border-t border-slate-100">
+                    <div class="flex items-center gap-1.5 font-bold text-slate-900">
+                        <i class="fa-regular fa-clock text-clinic-primary"></i>
+                        <span>السبت – الخميس: 4:00 – 6:00 عصراً</span>
+                    </div>
+                    <span class="text-slate-300">|</span>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-check text-clinic-primary"></i>
+                        <span>تنظيم مواعيد مسبق</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left Column: Clean Clinic Visual Card -->
+            <div class="lg:col-span-5">
+                <div class="relative rounded-3xl overflow-hidden bg-clinic-light border border-emerald-100 p-3 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=80" 
+                         alt="عيادة الدكتور كناز أبو زعل في المزة دمشق" 
+                         class="w-full h-[380px] object-cover rounded-2xl">
+                    
+                    <!-- Floating Status Card -->
+                    <div class="bg-white rounded-2xl p-4 shadow-md border border-slate-100 mt-3 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-full bg-clinic-light text-clinic-primary flex items-center justify-center text-lg">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500">أوقات العيادة (عدا الجمعة)</div>
+                                <div class="font-bold text-slate-900 text-sm">4:00 عصراً – 6:00 مساءً</div>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 rounded-full bg-emerald-50 text-clinic-primary text-xs font-bold">الحجز مسبقاً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Green Stats Bar -->
+    <section class="px-4 -mt-4 mb-16">
+        <div class="max-w-7xl mx-auto bg-clinic-dark rounded-3xl p-8 sm:p-10 text-white shadow-xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+                <div class="bg-clinic-accent rounded-2xl p-6 text-white shadow-md">
+                    <div class="text-xs uppercase tracking-wider font-bold opacity-90 mb-1">رعاية طبية متخصصة</div>
+                    <div class="text-2xl font-extrabold mb-2">تشخيص دقيق</div>
+                    <p class="text-xs leading-relaxed opacity-95">تقييم شامل للحالة الصحية ووضع خطة علاجية واضحة ومناسبة.</p>
+                </div>
+
+                <div class="px-4 border-r border-emerald-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-emerald-300">المزة</div>
+                    <div class="font-bold text-sm mt-1">موقع يسهل الوصول إليه</div>
+                    <p class="text-xs text-emerald-100/75 mt-1">في قلب دمشق لخدمة المراجعين بكل راحة وسهولة.</p>
+                </div>
+
+                <div class="px-4 border-r border-emerald-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-emerald-300">100%</div>
+                    <div class="font-bold text-sm mt-1">خصوصية واهتمام</div>
+                    <p class="text-xs text-emerald-100/75 mt-1">تخصيص الوقت الكافي للاستماع لكل مريض ومتابعة حالته.</p>
+                </div>
+
+                <div class="px-4 border-r border-emerald-800/80">
+                    <div class="text-3xl sm:text-4xl font-extrabold text-emerald-300">مباشر</div>
+                    <div class="font-bold text-sm mt-1">حجز عبر واتساب</div>
+                    <p class="text-xs text-emerald-100/75 mt-1">تنسيق فوري للمواعيد لتفادي الانتظار في العيادة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Services Section -->
+    <section id="services" class="py-20 px-4 bg-clinic-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="text-clinic-primary font-bold text-sm">خدمات العيادة</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">رعاية صحية متكاملة ومتابعة مستمرة</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-3">نحرص على تقديم الاستشارات والفحوصات الطبية بدقة عالية وفق أحدث المعايير السريرية.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">الفحص السريري والاستشارة الطبية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">تقييم دقيق للأعراض والتاريخ المرضي للوصول إلى التشخيص السليم ووصف العلاج المناسب.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز استشارة</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">متابعة الحالات المزمنة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">برامج متابعة دورية منتظمة لضبط المؤشرات الصحية والوقاية من أي مضاعفات.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز موعد متابعة</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-file-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">قراءة التحاليل والفحوصات</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">تفسير نتائج التحاليل المخبرية والاستقصاءات الشعاعية وتوجيه المريض للخطوة العلاجية الصحيحة.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>أرسل استفسارك</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">الطب الوقائي والفحص الدوري</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">فحوصات وقائية شاملة للاطمئنان على الصحة العامة والكشف المبكر عن أي تغيرات صحية.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز فحصاً دورياً</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">تنظيم الخطط العلاجية</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">إعداد بروتوكول علاجي واضح ومتكامل مع شرح طريقة الاستخدام والمتابعة بعد الجلسة.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>تواصل مع العيادة</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-7 border border-slate-200/80 hover:border-clinic-primary transition shadow-sm">
+                    <div class="w-12 h-12 rounded-xl bg-clinic-light text-clinic-primary flex items-center justify-center text-xl mb-5">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">نظام المواعيد المسبقة</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">تنسيق المواعيد مسبقاً عبر واتساب لضمان استقبالك في الوقت المحدد دون أي تأخير.</p>
+                    <a href="#booking" class="text-clinic-primary font-bold text-xs flex items-center gap-1.5 hover:underline">
+                        <span>احجز موعدك الآن</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor & FAQ Section -->
+    <section id="doctor" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5">
+                <div class="bg-clinic-light rounded-3xl p-6 border border-emerald-100">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-2xl bg-clinic-dark text-white flex items-center justify-center text-2xl font-bold">
+                                د.ك
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-extrabold text-slate-900">الدكتور كناز أبو زعل</h3>
+                                <p class="text-clinic-primary text-sm font-semibold">عيادة الدكتور كناز أبو زعل — المزة، دمشق</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            نلتزم في العيادة بتقديم رعاية طبية قائمة على الدقة العلمية والتواصل الواضح مع المريض، مع الحرص على تنظيم المواعيد لضمان راحة كل مراجع.
+                        </p>
+                        <div class="grid grid-cols-2 gap-3 pt-2">
+                            <div class="p-3 rounded-xl bg-clinic-surface text-xs font-semibold text-slate-700 flex items-center gap-2">
+                                <i class="fa-solid fa-check-circle text-clinic-primary"></i>
+                                <span>تقييم سريري دقيق</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-clinic-surface text-xs font-semibold text-slate-700 flex items-center gap-2">
+                                <i class="fa-solid fa-check-circle text-clinic-primary"></i>
+                                <span>متابعة مستمرة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div id="faq" class="lg:col-span-7 space-y-4">
+                <span class="text-clinic-primary font-bold text-sm">إجابات واضحة</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-6">الأسئلة الشائعة للمراجعين</h2>
+
+                <div class="faq-item active border border-slate-200 rounded-2xl p-5 cursor-pointer bg-white" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>ما هي أوقات دوام عيادة الدكتور كناز أبو زعل؟</span>
+                        <i class="fa-solid fa-plus text-clinic-primary faq-icon transition-transform"></i>
+                    </div>
+                    <div class="faq-content text-slate-600 text-sm leading-relaxed">
+                        <p class="pt-3">تفتح العيادة أبوابها يومياً من السبت إلى الخميس، من الساعة 4:00 عصراً وحتى الساعة 6:00 مساءً (الجمعة عطلة أسبوعية).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-2xl p-5 cursor-pointer bg-white" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>كيف يمكنني حجز موعد مسبق قبل الحضور؟</span>
+                        <i class="fa-solid fa-plus text-clinic-primary faq-icon transition-transform"></i>
+                    </div>
+                    <div class="faq-content text-slate-600 text-sm leading-relaxed">
+                        <p class="pt-3">يمكنك إرسال طلب الحجز مباشرة عبر نموذج الموقع أو عبر واتساب العيادة على الرقم 0953651412 لتأكيد موعدك.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item border border-slate-200 rounded-2xl p-5 cursor-pointer bg-white" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center font-bold text-slate-900">
+                        <span>هل يُفضل إحضار التحاليل أو الوصفات السابقة عند الزيارة؟</span>
+                        <i class="fa-solid fa-plus text-clinic-primary faq-icon transition-transform"></i>
+                    </div>
+                    <div class="faq-content text-slate-600 text-sm leading-relaxed">
+                        <p class="pt-3">نعم، يُنصح دائماً بإحضار أي تحاليل مخبرية أو صور شعاعية أو أدوية سابقة لتساعد الطبيب في تقييم الحالة بدقة أكبر.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking, Location & Interactive Google Map Section -->
+    <section id="booking" class="py-16 px-4 bg-clinic-surface">
+        <div class="max-w-7xl mx-auto bg-clinic-dark rounded-3xl overflow-hidden shadow-xl grid lg:grid-cols-12">
+            
+            <!-- Location, Hours & Interactive Map -->
+            <div id="location" class="lg:col-span-5 p-8 sm:p-10 text-white flex flex-col justify-between bg-gradient-to-br from-clinic-dark to-emerald-950">
+                <div class="space-y-5">
+                    <span class="inline-block px-3 py-1 rounded-full bg-emerald-800/70 text-emerald-200 text-xs font-bold">الموقع وساعات العمل</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold leading-snug">احجز موعدك مع الدكتور كناز أبو زعل</h2>
+
+                    <div class="space-y-3.5 text-sm">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-clinic-accent mt-1"></i>
+                            <div>
+                                <div class="font-bold">العنوان</div>
+                                <div class="text-emerald-100/80">المزة، دمشق، سوريا</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-regular fa-clock text-clinic-accent mt-1"></i>
+                            <div>
+                                <div class="font-bold">ساعات العمل</div>
+                                <div class="text-emerald-100/80">السبت – الخميس: 4:00 عصراً – 6:00 مساءً (الجمعة عطلة)</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp text-clinic-accent mt-1"></i>
+                            <div>
+                                <div class="font-bold">واتساب وهاتف العيادة</div>
+                                <div class="text-emerald-100/80" dir="ltr">+963 953 651 412</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Google Maps Embed (Al Mazzeh, Damascus) -->
+                    <div class="pt-2">
+                        <div class="rounded-2xl overflow-hidden border border-emerald-700/60 shadow-lg bg-emerald-900/40">
+                            <iframe 
+                                title="موقع عيادة الدكتور كناز أبو زعل - المزة، دمشق"
+                                src="https://maps.google.com/maps?q=%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9%20%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D9%83%D9%86%D8%A7%D8%B2%20%D8%A7%D8%A8%D9%88%20%D8%B2%D8%B9%D9%84%20%D8%A7%D9%84%D9%85%D8%B2%D8%A9%20%D8%AF%D9%85%D8%B4%D9%82&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                class="w-full h-48 border-0" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=عيادة+الدكتور+كناز+ابو+زعل+المزة+دمشق" target="_blank" rel="noopener noreferrer" class="mt-2.5 inline-flex items-center gap-1.5 text-xs font-bold text-emerald-300 hover:text-white transition">
+                            <i class="fa-solid fa-diamond-turn-right"></i>
+                            <span>فتح الموقع في تطبيق خرائط جوجل للملاحة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pt-5 mt-5 border-t border-emerald-800/60 text-xs text-emerald-200/70">
+                    * نظراً لمحدودية ساعات العيادة (4 – 6 عصراً)، يُنصح بالحجز المسبق عبر واتساب.
+                </div>
+            </div>
+
+            <!-- Clean White Booking Form -->
+            <div class="lg:col-span-7 p-8 sm:p-12 bg-white flex flex-col justify-center">
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-2">نموذج حجز موعد</h3>
+                <p class="text-slate-500 text-sm mb-6">سيتم فتح محادثة واتساب جاهزة ببياناتك لإرسالها إلى العيادة بضغطة واحدة.</p>
+
+                <form id="clinicBookingForm" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">الاسم الكامل *</label>
+                            <input type="text" id="pName" required placeholder="أدخل اسمك الكريم" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-clinic-primary focus:ring-2 focus:ring-emerald-100 outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1.5">نوع الزيارة</label>
+                            <select id="pService" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-clinic-primary focus:ring-2 focus:ring-emerald-100 outline-none text-sm bg-white">
+                                <option value="فحص واستشارة جديدة">فحص واستشارة جديدة</option>
+                                <option value="متابعة علاجية">متابعة علاجية</option>
+                                <option value="قراءة تحاليل وفحوصات">قراءة تحاليل وفحوصات</option>
+                                <option value="استفسار طبي">استفسار طبي</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">اليوم المفضل (الدوام من 4:00 إلى 6:00 عصراً)</label>
+                        <input type="text" id="pTime" placeholder="مثال: يوم الإثنين الساعة 4:30 عصراً" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-clinic-primary focus:ring-2 focus:ring-emerald-100 outline-none text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1.5">ملاحظات إضافية (اختياري)</label>
+                        <textarea id="pNotes" rows="3" placeholder="اذكر أي استفسار أو حالة خاصة..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-clinic-primary focus:ring-2 focus:ring-emerald-100 outline-none text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-clinic-accent hover:bg-clinic-primary text-white font-bold py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2 text-sm sm:text-base">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>إرسال طلب الحجز عبر واتساب</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-8 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <div class="font-bold text-slate-700">عيادة الدكتور كناز أبو زعل — دمشق</div>
+            <div>المزة، دمشق | جميع الحقوق محفوظة © 2026</div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        document.getElementById('clinicBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('pName').value.trim();
+            const service = document.getElementById('pService').value;
+            const time = document.getElementById('pTime').value.trim() || 'أقرب موعد متاح';
+            const notes = document.getElementById('pNotes').value.trim();
+
+            let text = `مرحباً دكتور كناز، أرغب بحجز موعد في العيادة:%0A`;
+            text += `• الاسم: ${name}%0A`;
+            text += `• نوع الزيارة: ${service}%0A`;
+            text += `• الموعد المفضل: ${time}`;
+            if (notes) {
+                text += `%0A• ملاحظات: ${notes}`;
+            }
+
+            window.open(`https://wa.me/963953651412?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>
